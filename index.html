@@ -499,9 +499,10 @@ body {
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
-.tip-product { display: grid; grid-template-columns: 120px 1fr 1fr; gap: 16px; margin-bottom: 1rem; align-items: start; }
-.tip-img-col { background: #f9f8f6; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px 8px; gap: 6px; }
-.tip-img-col img { width: 100%; height: auto; max-height: 108px; object-fit: contain; }
+.tip-product { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; gap: 16px; margin-bottom: 1rem; }
+.tip-img-col { grid-column: 1 / -1; background: #f9f8f6; border-radius: 8px; overflow: hidden; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 16px 24px; gap: 16px; }
+.tip-img-col img { height: 90px; width: auto; max-width: 200px; object-fit: contain; }
+.tip-rules, .tip-convo { display: flex; flex-direction: column; }
 .tip-img-col.stacked { gap: 4px; }
 .tip-img-col .img-label { font-size: 9px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-align: center; }
 .ref-card-img { background: #f9f8f6; border-radius: 6px; display: flex; align-items: center; justify-content: center; padding: 10px; margin-bottom: 12px; }
@@ -895,6 +896,7 @@ body {
   <div class="ref-grid">
 
     <div class="ref-card">
+      <div class="ref-card-img"><img src="https://blushmedspact.com/wp-content/uploads/2026/05/6-scaled.jpg" alt="Restylane"></div>
       <div class="ref-product">Restylane</div>
       <div class="ref-offer">Buy 2, Get 1 Free</div>
       <div class="ref-rule"><span class="ref-pill pill-blue">Same-visit</span> All 3 syringes must be used in one visit</div>
@@ -903,6 +905,7 @@ body {
     </div>
 
     <div class="ref-card">
+      <div class="ref-card-img"><img src="https://blushmedspact.com/wp-content/uploads/2026/05/download-3.jpg" alt="Sculptra + Restylane"></div>
       <div class="ref-product">Sculptra + Restylane</div>
       <div class="ref-offer">Buy 4 Sculptra &rarr; 1 Restylane Free</div>
       <div class="ref-rule"><span class="ref-pill pill-blue">Package</span> <strong>Sculptra + Restylane – Buy 4 Vials, Get 1 Restylane Free</strong> — Zenoti package, not a discount campaign code</div>
